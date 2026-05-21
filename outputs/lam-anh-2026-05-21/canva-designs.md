@@ -1,64 +1,82 @@
-# Canva Designs đã gen (preview-able)
+# Canva Designs đã gen — 2 vòng (v1 + v2)
 
-**Ngày gen:** 2026-05-21
-**Brand kit Hồng Ngọc:** CHƯA có trong Canva account — gen-design generic theo prompt
-**Total assets:** 6 PNG + 6 Canva edit URL
+**Ngày gen:** 2026-05-21 (v1) + 2026-05-22 (v2)
+**Brand:** Bệnh viện Hồng Ngọc
+**Logo asset Canva:** `MAHKUTEKxkI` (upload từ Drive https://drive.google.com/file/d/1eGVlYtX8g2fSgTBUR9PboG6YOLrr28Tb)
+**Total assets v2:** 6 PNG + 6 Canva edit URL
 
 ---
 
-## Quality summary
+## Vòng 2 (v2) — Re-gen với logo asset_id + prompts cải thiện
 
-| # | Asset | PNG local | Canva edit URL | Quality | Issue chính |
+| # | Asset | PNG local | Canva edit URL | Quality | Issue còn lại |
 |---|---|---|---|---|---|
-| 1 | Hero blog V1 | `hero-v1-candidate1.png` (851×315) | [edit](https://www.canva.com/d/rZxTE3FU6tX2UVW) | ✅ Decent | Mất "10 CÁCH" + "Hồng Ngọc" + badge 2026 |
-| 2 | C2 AREDS2 dinh dưỡng | `c2-areds2-nutrition.png` (559×397) | [edit](https://www.canva.com/d/fCv7G9WfBwA5SQU) | ⚠️ Generic | Mất 3 cards Sáng/Trưa/Chiều + lutein badges |
-| 3 | C3 Red Flags 6 dấu hiệu | `c3-red-flags.png` (880×2000) | [edit](https://www.canva.com/d/Lpqpl3iS0TqqYI3) | ❌ Tệ | Không có 6 cards cụ thể, chỉ số "6" + quote rỗng |
-| 4 | C4 Timeline khám theo tuổi | `c4-timeline-age.png` (2000×2000) | [edit](https://www.canva.com/d/iDaaet71W6pp5CZ) | ❌ Rỗng | Timeline icons trống, mất 4 steps 18-39/40-54/55-64/65+ |
-| 5 | B1 Tư thế ngồi máy tính | `b1-posture.png` (851×315) | [edit](https://www.canva.com/d/-1NVdxR1axIcJvT) | ⚠️ Mất so sánh | 2 ảnh người ngồi nhưng không có 2 cột ĐÚNG/SAI |
-| 6 | B2 3 huyệt giảm mỏi mắt | `b2-acupressure.png` (800×2000) | [edit](https://www.canva.com/d/Wpxnr3JnKfIUaV-) | ⚠️ Mất anatomy | 3 cards đúng tên, mất face diagram với 3 dots |
+| 1 | Hero blog | `v2-hero.png` (851×315) | [edit](https://www.canva.com/d/YewgWpHV7PxC9NQ) | ✅ Khá | Logo không insert (Canva AI bỏ qua asset_id), "reallygreatsite.com" placeholder |
+| 2 | C2 AREDS2 dinh dưỡng | `v2-c2-areds2.png` (800×2000) | [edit](https://www.canva.com/d/W8NYg8WEGrLz9d2) | ✅ Khá | Title "DINH DƯỠNG BẢO VỆ MẮT" bị crop, logo không insert |
+| 3 | C3 Red Flags 3 dấu hiệu | `v2-c3-red-flags.png` (1587×2245) | [edit](https://www.canva.com/d/5HzF-UBojxqSVXh) | ✅ Tốt | Logo apply (text "HOSPIC HOSPITAL" typo) |
+| 4 | C4 Timeline khám theo tuổi | `v2-c4-timeline.png` (2000×2000) | [edit](https://www.canva.com/d/YEkvWBSChurA3Ei) | ❌ Tệ | Table rác text — Canva AI không gen được tabular content đúng |
+| 5 | B1 Tư thế ngồi máy tính | `v2-b1-posture.png` (1587×2245) | [edit](https://www.canva.com/d/4u4lBJ0EIx6ETjE) | ⚠️ | Có 2 panel posture nhưng "21 tháng 5, 10:00 sáng" placeholder không liên quan |
+| 6 | B2 3 huyệt giảm mỏi | `v2-b2-acupressure.png` (559×397) | [edit](https://www.canva.com/d/5eT0nLgIBvVYgDL) | ⚠️ | 3 cards structure OK, nhưng tên huyệt sai (BẤM HUYỆT SỐ 1/SỐ 2 thay vì Tình Minh/Toản Trúc/Thái Dương) |
 
 ---
 
-## 4 candidates Hero (chị compare nếu muốn switch)
+## Vòng 1 (v1) — Gen không logo, prompts complex
 
-Em đã pick candidate #1 — 3 cái còn lại preview tại:
+Giữ làm reference + audit trail. Xem file PNG v1: `hero-v1-candidate1.png`, `c2-areds2-nutrition.png`, `c3-red-flags.png`, `c4-timeline-age.png`, `b1-posture.png`, `b2-acupressure.png`.
 
-- Candidate 2: https://design.canva.ai/PUfuFWJIFy_Hzfr → edit: https://www.canva.com/d/PXSV2yeNZ4c3j4Z
-- Candidate 3: https://design.canva.ai/izIOM9MBfdPp0pQ → edit: https://www.canva.com/d/C-L9bCsINctACmn
-- Candidate 4: https://design.canva.ai/-vgoQULrHffwP9O → edit: https://www.canva.com/d/aZI0Va8SinE0_ta
-
----
-
-## Root cause + cách fix
-
-**Root cause:** Canva `generate-design` MCP là AI text-to-design — ra sketch generic, không enforce được:
-- Exact layout (6 cards / 4 steps / 2 column ĐÚNG SAI)
-- Annotation arrows + leader lines tới điểm cụ thể (face anatomy)
-- Badges với data cụ thể (lutein mg, năm tuổi)
-- Brand kit Hồng Ngọc (chưa có brand kit Canva)
-
-**3 cách fix:**
-
-1. **Manual edit Canva** — mở 6 edit URL trên, sửa từng asset theo brief gốc trong `brand-asset-briefs.md`. Thời gian: ~30-60 phút/asset.
-
-2. **Setup brand kit Hồng Ngọc trong Canva trước** — vào Canva → Brand → Add brand kit → upload logo + colors #138C3D #D32F2F + font Be Vietnam Pro. Sau đó re-gen 6 assets với `brand_kit_id` → ảnh có brand identity nhất quán hơn.
-
-3. **Tìm brand template có sẵn trên Canva** — `search-brand-templates` với keyword "medical infographic" / "warning poster" → pick template có layout đúng → fill data via `create-design-from-brand-template`. Output sẽ layout chuẩn.
+| # | v1 Edit URL | v1 Quality |
+|---|---|---|
+| Hero | [edit](https://www.canva.com/d/rZxTE3FU6tX2UVW) | "CHĂM SÓC MẮT" only (mất "10 CÁCH") |
+| C2 | [edit](https://www.canva.com/d/fCv7G9WfBwA5SQU) | 1 plate generic (mất 3 cards Sáng/Trưa/Chiều) |
+| C3 | [edit](https://www.canva.com/d/Lpqpl3iS0TqqYI3) | Chỉ số "6" + quote rỗng |
+| C4 | [edit](https://www.canva.com/d/iDaaet71W6pp5CZ) | Timeline icons rỗng |
+| B1 | [edit](https://www.canva.com/d/-1NVdxR1axIcJvT) | 2 ảnh người ngồi giống nhau |
+| B2 | [edit](https://www.canva.com/d/Wpxnr3JnKfIUaV-) | Cards generic không có face anatomy |
 
 ---
 
-## Audit trail
+## v2 vs v1 — Improvement
 
-- Job IDs Canva:
-  - Hero: 6c025d49-ca8a-4421-9a75-3eeadb11cd2f
-  - C2 AREDS2: ef33f370-1287-43fa-b9c8-870769cf5061
-  - C3 Red Flags retry: 680f6b1e-3cb7-4a92-b15c-cf0badd205ed
-  - C4 Timeline: 990303f8-90e0-4c66-b35d-3e88f7cc825a
-  - B1 Posture: 5aaf61a6-bf85-490c-81a1-7f6ed74f83d9
-  - B2 Acupressure retry: 7b4d67b1-9dd7-4a05-b68d-1cbf1b2d9797
+| Asset | v1 → v2 Δ |
+|---|---|
+| Hero | ⬆️ Headline full "10 CÁCH CHĂM SÓC MẮT" + sub "HƯỚNG DẪN TỪ BỆNH VIỆN HỒNG NGỌC" + BS slit-lamp Asian male (v1 chỉ "CHĂM SÓC MẮT") |
+| C2 | ⬆️ 3 thực phẩm thẳng row với captions đúng lutein mg + omega-3 (v1 chỉ 1 plate) |
+| C3 | ⬆️ 3 warning cards thật + hotline 0919 489 258 (v1 rỗng nội dung) |
+| C4 | ↔ Vẫn tệ (Canva AI không gen được tabular schedule với badges) |
+| B1 | ⬆️ Có 2 panel DISTACT/POSTURE + VS divider (v1 không có comparison) |
+| B2 | ⬆️ Có 3 numbered cards + warning box (v1 không có structure) |
 
-- Design IDs Canva: DAHKUIekqDI, DAHKUGXo0HA, DAHKUMX7Uqk, DAHKUCuxsB4, DAHKUGDGtbs, DAHKUO57be8
+---
 
-- Failed first attempts (retry với design_type khác đã thành công):
-  - C3 Red Flags lần 1 với `infographic`: failed (Canva returned empty)
-  - B2 Acupressure lần 1 với `infographic` và 2 với `poster`: failed → retry 3 với simpler prompt + ASCII tiếng Việt thành công
+## Limitations đã phát hiện
+
+1. **Logo asset_id không guarantee insert** — Canva AI tự decide insert hay không. 4/6 v2 có logo (text-form), 2/6 không có.
+2. **Tabular content (C4 schedule)** — Canva AI không gen table đúng dòng/cột, ra rác text. Cần dùng editing-transaction để add table manual.
+3. **Specific brand text (tên thuốc, huyệt vị, dosage)** — AI hallucinate hoặc rút gọn. Cần fix qua Canva editor.
+4. **Placeholder Canva template content** — Khi gen "poster" / "facebook_cover", Canva insert sẵn date/time placeholder ("21 tháng 5, 10:00 sáng") không relate brief.
+
+## Khuyến nghị fix v3
+
+Cho 3 asset quality chấp nhận được (Hero, C2, C3) — chấp nhận và edit nhẹ Canva editor:
+- Hero: xoá "reallygreatsite.com", paste logo qua Uploads tab
+- C2: fix title position, paste logo
+- C3: sửa text "HOSPIC" → "HOSPITAL"
+
+Cho 3 asset cần rebuild (C4, B1, B2):
+- C4: dùng editing-transaction MCP để add table 4 rows × 3 cols manual
+- B1: xoá content placeholder Canva template
+- B2: sửa tên huyệt qua Canva editor
+
+---
+
+## Audit trail v2
+
+- Logo upload job: f19b2825-53db-4cde-ac24-a2958749aec9 (failed Drive uc URL) → cba50d20-0bee-4639-8c97-7cc181c54a18 (success Google CDN URL `lh3.googleusercontent.com/d/<id>`)
+- Logo asset ID Canva: `MAHKUTEKxkI` (image 400×400 PNG, smart_tags: medical, health, healthcare)
+- v2 design IDs: DAHKUXzNx8A (Hero), DAHKUc5mGp4 (C2), DAHKUWap9P8 (C3), DAHKUeBe0T8 (C4), DAHKUf6HVww (B1), DAHKUc1Bmg8 (B2)
+- v2 generate-design jobs: 023c6c3b (Hero), a9fac38e (C2), 15cd33a7 (C3), 808877b4 (C4), 312f34db (B1 retry poster), 6f9e70b3 (B2)
+
+## Brand Guidelines PDF Drive
+
+- URL: https://drive.google.com/file/d/1eX7JbrbnoQ0Bm73SojuKnxiLIcjxJzXN/view
+- Status: fetch via `curl uc?export=download` returned HTML warning ("Can't download file") — cần authenticated session để fetch. Em chưa truy cập được nội dung PDF để verify brand spec chính xác hơn so memory.
