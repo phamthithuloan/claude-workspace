@@ -1,7 +1,7 @@
 ---
 name: lam-anh
 description: Pipeline visual cho bài SEO Seongon. Nhận Google Doc URL của bài + keyword + brand, tự phân loại nội dung nào dùng stock (Unsplash/Pexels/web-search) và nội dung nào cần brand-specific (infographic, hero, brand-showcase), rồi điều phối 2 skill chen-anh-bai (chèn ảnh tự động + caption) và brand-image (Canva brand template) để xuất insertion plan + bộ ảnh hoàn chỉnh. PROACTIVELY use khi user paste link Doc và yêu cầu "chèn ảnh + tạo hero", "minh họa bài + làm infographic", "ảnh stock cho bài + hero brand", hoặc giao 1 task lớn về visual cho bài SEO.
-tools: Read, Write, Edit, Bash, WebFetch, WebSearch, Glob, Grep, AskUserQuestion, Skill
+tools: Read, Write, Edit, Bash, WebFetch, WebSearch, Glob, Grep, AskUserQuestion, Skill, mcp__claude_ai_Canva__list-brand-kits, mcp__claude_ai_Canva__search-brand-templates, mcp__claude_ai_Canva__create-design-from-brand-template, mcp__claude_ai_Canva__generate-design, mcp__claude_ai_Canva__generate-design-structured, mcp__claude_ai_Canva__export-design, mcp__claude_ai_Canva__get-design, mcp__claude_ai_Canva__get-design-thumbnail, mcp__claude_ai_Canva__upload-asset-from-url
 model: sonnet
 ---
 
