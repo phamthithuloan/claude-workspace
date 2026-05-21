@@ -1,0 +1,20 @@
+.DS_Store
+node_modules/
+.env
+.env.local
+*.log
+
+# Tmp output từ agents (giữ schema, không commit data)
+/tmp/
+tmp/
+
+# Local cache
+.cache/
+
+# IDE
+.vscode/
+.idea/
+
+# Backups
+*.bak
+*.swp
